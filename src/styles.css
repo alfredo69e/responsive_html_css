@@ -1,1 +1,312 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* Fuentes */
+
+@font-face {
+    font-family: TrebuchetMS;
+    src: url(./assets/fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: BebasNeue;
+    src: url(./assets/fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: WebSymbolsRegular;
+    src: url(./assets/fonts/websymbols-regular-webfont.eot);
+    src: url(./assets/fonts/websymbols-regular-webfont.eot?#iefix) format("embedded-opentype"), url(./assets/fonts/websymbols-regular-webfont.woff) format("woff"), url(./assets/fonts/websymbols-regular-webfont.ttf) format("truetype"), url(./assets/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* General */
+
+body {
+    background: url(./assets/img/pattern.png);
+}
+
+.wrap {
+    width: 1250px;
+    margin: 0px auto;
+}
+
+
+/* cabecera */
+
+#header {
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: BebasNeue;
+}
+
+#logo {
+    float: left;
+    width: 200px;
+    background-color: #37BCF3;
+    text-align: center;
+    margin-top: 8px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#logo .gear {
+    display: block;
+    float: left;
+    font-size: 30px;
+    margin-top: 8px;
+    margin-left: 26px;
+    animation-name: rotate-name;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#logo:hover {
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    color: #000000;
+    background-color: #ccc;
+}
+
+@keyframes rotate-name {
+    from {
+        transform: rotateZ(0deg);
+        -webkit-transform: rotateZ(0deg);
+        -moz-transform: rotateZ(0deg);
+        -ms-transform: rotateZ(0deg);
+        -o-transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+    }
+}
+
+#logo:hover .gear {
+    animation: fromBellow 0.5s linear;
+    -webkit-animation: fromBellow 0.5s linear;
+}
+
+@keyframes fromBellow {
+    0% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(200%);
+        -webkit-transform: translateY(200%);
+        -moz-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+    }
+}
+
+#logo h3 {
+    display: block;
+    font-size: 40px;
+    float: right;
+    font-size: 40px;
+    margin-top: 5px;
+    margin-right: 65px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#logo:hover h3 {
+    animation: fromRight 0.3s linear;
+    -webkit-animation: fromRight 0.3s linear;
+}
+
+@keyframes fromRight {
+    from {
+        transform: translateX(200%);
+        -webkit-transform: translateX(200%);
+        -moz-transform: translateX(200%);
+        -ms-transform: translateX(200%);
+        -o-transform: translateX(200%);
+    }
+    to {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+
+#menu {
+    float: right;
+    height: 70px;
+    background: transparent;
+}
+
+#menu ul li {
+    font-size: 24px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 70px;
+}
+
+#menu ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#menu ul li a:hover {
+    color: #37BCF9;
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+
+/* footer */
+
+#footer {
+    width: 100%;
+    height: 470px;
+    background: #000000;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+#footer .wrap>div {
+    float: left;
+    width: 320px;
+    height: 370px;
+    margin: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: TrebuchetMS;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #37bcf9;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#footer h5 {
+    display: block;
+    background: url(./assets/img/pxgray.png), #FFFFFF;
+    height: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: BebasNeue;
+    font-size: 40px;
+    line-height: 55px;
+    color: #000000;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#footer ul {
+    text-align: left;
+    margin: 20px;
+    font-size: 25px;
+}
+
+#footer ul li {
+    margin-top: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer ul li a {
+    display: block;
+    height: 40px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+#footer ul li:hover a {
+    padding-left: 40px;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+#footer iframe {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#footer img {
+    margin-bottom: 15px;
+}
+
+#footer #browsers img {
+    width: 45px;
+}
